@@ -8,3 +8,12 @@ export const catalogo = [
     { id: "7", marca: 'Zara', nome: 'Casaco com Botões', preco: 75, imagem: 'product-7.jpg', feminino: true, }, 
     { id: "8", marca: 'Zara', nome: 'Colete Comprido com Cinto', preco: 88, imagem: 'product-8.jpg', feminino: true, }
 ];
+
+
+export function salvarLocalStorage(chave, info){
+  localStorage.setItem(chave, JSON.stringify(info));
+}
+
+export function lerLocalStorage(chave){
+  return JSON.parse(localStorage.getItem(chave));
+}
